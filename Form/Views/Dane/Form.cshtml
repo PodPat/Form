@@ -1,0 +1,46 @@
+﻿
+
+@model Dane
+
+<form asp-action="Form" method="post">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label asp-for="Imie">Twoje imie </label>
+        <input asp-for="Imie" />
+    </div>
+    <div>
+        <label asp-for="Nazwisko">Twoje nazwisko </label>
+        <input asp-for="Nazwisko" />
+    </div>
+    <div>
+        <label asp-for="Email">Twoj email </label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="Haslo">Haslo</label>
+        <input asp-for="Haslo" />
+    </div>
+    <div>
+        <label asp-for="Haslo_2">Haslo_2</label>
+        <input asp-for="Haslo_2" />
+    </div>
+    <div>
+        <label asp-for="nr_telefonu">Nr. telefonu</label>
+        <input asp-for="nr_telefonu" />
+    </div>
+    <div>
+        <label asp-for="Wiek">Wiek</label>
+        <input asp-for="Wiek" />
+    </div>
+    <div>   
+        <select asp-for="Miasto"
+                asp-items="Html.GetEnumSelectList<Dane.Miasta>()">
+        </select>      
+    </div>
+    <div>
+        <input type="submit" 
+    </div>
+    <div>   
+        <input type="reset" 
+    </div>
+</form>
